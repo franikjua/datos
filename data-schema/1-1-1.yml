@@ -1,0 +1,113 @@
+fields:
+  - name: Year
+    type: integer
+    description: "Año de la medición (ejemplo: 2023)."
+  
+  - name: Country
+    type: string
+    description: "Código de país en formato ISO 3166-1 alpha-3 (ejemplo: MEX, COL, ARG)."
+    constraints:
+      pattern: "^[A-Z]{3}$"  # Valida códigos de país de 3 letras
+
+  - name: Area_Influence
+    type: string
+    description: "Ubicación geográfica donde se realiza el estudio."
+
+  - name: Location
+    type: string
+    description: "Zona geográfica de la población."
+    constraints:
+      enum:
+        - "All"
+        - "Rural"
+        - "Urban"
+  
+  - name: Impact
+    type: string
+    description: "Impacto producido por la intervención."
+
+  - name: Total_Population
+    type: integer
+    description: "Número total de personas objeto de estudio o impactadas."
+    constraints:
+      minimum: 0
+
+  - name: Sex
+    type: string
+    description: "Género de la población analizada."
+    constraints:
+      enum:
+        - "All"
+        - "Female"
+        - "Male"
+        - "Non-binary"
+
+  - name: Age_Group
+    type: string
+    description: "Grupo de edad de la población."
+    constraints:
+      enum:
+        - "All"
+        - "0-17"
+        - "18-64"
+        - "65+"
+
+  - name: Disabled_Persons
+    type: integer
+    description: "Número total de personas con discapacidad en el estudio."
+    constraints:
+      minimum: 0
+
+  - name: Race
+    type: string
+    description: "Raza de la población estudiada o impactada."
+    constraints:
+      enum:
+        - "All"
+        - "Blancos y mestizos"
+        - "Afrocolombianos"  # Negros, mulatos, palenqueros y raizales
+        - "Indígenas"
+        - "Rom"
+
+  - name: Immigration_Status
+    type: string
+    description: "Condición legal de la población de estudio o impactada."
+    constraints:
+      enum:
+        - "All"
+        - "Ciudadanos"
+        - "Residentes"
+        - "Refugiados"
+        - "Inmigrantes"
+        - "Indocumentado"
+
+  - name: Employment_Status
+    type: string
+    description: "Condición laboral de la población de estudio o impactada."
+    constraints:
+      enum:
+        - "All"
+        - "Empleados"
+        - "Desempleados"
+        - "Trabajadores informales"
+        - "Independientes"
+
+  - name: Poverty_Level
+    type: string
+    description: "Nivel de pobreza de la población de estudio o impactada."
+    constraints:
+      enum:
+        - "All"
+        - "Pobreza extrema"
+        - "Pobreza moderada"
+        - "Pobreza leve"
+        - "Pobreza media"
+        - "Pobreza alta"
+
+  - name: Value
+    type: number
+    description: "Proporción de la población bajo la línea de pobreza (%)."
+    constraints:
+      minimum: 0
+      maximum: 100
+    precision: 2
