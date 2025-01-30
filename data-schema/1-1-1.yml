@@ -18,7 +18,7 @@ fields:
     description: "Zona geográfica de la población."
     constraints:
       enum:
-        - "All"
+        - ""
         - "Rural"
         - "Urban"
   
@@ -37,7 +37,7 @@ fields:
     description: "Género de la población analizada."
     constraints:
       enum:
-        - "All"
+        - ""
         - "Female"
         - "Male"
         - "Non-binary"
@@ -47,7 +47,7 @@ fields:
     description: "Grupo de edad de la población."
     constraints:
       enum:
-        - "All"
+        - ""
         - "0-17"
         - "18-64"
         - "65+"
@@ -63,7 +63,7 @@ fields:
     description: "Raza de la población estudiada o impactada."
     constraints:
       enum:
-        - "All"
+        - ""
         - "Blancos y mestizos"
         - "Afrocolombianos"  # Negros, mulatos, palenqueros y raizales
         - "Indígenas"
@@ -74,7 +74,7 @@ fields:
     description: "Condición legal de la población de estudio o impactada."
     constraints:
       enum:
-        - "All"
+        - ""
         - "Ciudadanos"
         - "Residentes"
         - "Refugiados"
@@ -86,7 +86,7 @@ fields:
     description: "Condición laboral de la población de estudio o impactada."
     constraints:
       enum:
-        - "All"
+        - ""
         - "Empleados"
         - "Desempleados"
         - "Trabajadores informales"
@@ -97,7 +97,7 @@ fields:
     description: "Nivel de pobreza de la población de estudio o impactada."
     constraints:
       enum:
-        - "All"
+        - ""
         - "Pobreza extrema"
         - "Pobreza moderada"
         - "Pobreza leve"
